@@ -1,5 +1,6 @@
 SudokuSolver.vcxproj
 SudokuSolver.vcxproj.user
+x64/
 output.txt
 input.txt
 otazky.txt
