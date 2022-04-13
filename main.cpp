@@ -17,7 +17,7 @@ enum class IO {
 struct Sudoku {
 
 	bool isValid = true;
-	std::array<std::bitset<cellNum>, cellNum> rows    = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+	std::array<std::bitset<cellNum>, cellNum> rows = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 	std::array<std::bitset<cellNum>, cellNum> columns = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 	std::array<std::bitset<cellNum>, cellNum> subgrid = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 	std::vector<std::vector<char>> board;
@@ -253,9 +253,9 @@ int main(int argc, char* argv[]) {
 		auto board = sudokus[i];
 		bool solved = false;
 
-		if (board.isValid) 
+		if (board.isValid)
 			solved = solveSudoku(board, 0, 0);
-		if (!solved) 
+		if (!solved)
 			board.isValid = false;
 
 		printSolution(board, output == IO::file ? ofs : std::cout, i == (sudokus.size() - 1));
